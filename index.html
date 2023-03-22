@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de empleados</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+</head>
+<body>
+    <header class="cabecera">
+        <dic>
+            <h1>LISTA DE EMPLEADOS</h1>
+            <p>A continuacion agregue un empleado nuevo.</p>
+            <hr>
+        </dic>
+        
+    </header>
+
+    <main>
+        <section id="agregarEmpleado" class="contenedor-row">
+            <div class="contenedor-col">
+                <form>
+                    <label for="nombre">Nombres</label><br>
+                    <input type="text" id="nombre" name="nombre"><br><br>
+                    <label for="apellido">Apellidos</label><br>
+                    <input type="text" id="apellido" name="apellido"><br><br>
+                    <label for="masculino">Masculino</label>
+                    <input type="checkbox" id="masculino" name="masculino">
+                    <label for="femenino">femenino</label>
+                    <input type="checkbox" id="femenino" name="femenino"><br><br>
+                    <label for="edad">Edad</label><br>
+                    <input type="number" name="edad" id="edad"><br><br>
+                    <label for="puesto">Puesto</label><br>
+                    <select name="puesto" id="puesto">
+                        <option value="default">--</option>
+                        <option value="We_Designer">Web Designer</option>
+                        <option value="UI/UX_Designer">UI/UX Designer</option>
+                        <option value="Frontend_Developer">Frontend Developer</option>
+                        <option value="Backend_Developer">Backend Developer</option>
+                        <option value="FullStack_Developer">FullStack Developer</option>
+                        <option value="DBA">DBA (Database Administrator)</option>
+                        <option value="DBA">DBA (Database Administrator)</option>
+                        <option value="Cloud_Architect">Cloud Architect</option>
+                        <option value="QA">QA (Quiality Assurance)</option>
+                    </select><br><br>
+                    <label for="salario">Salario Mensual</label><br>
+                    <input type="number" name="salario" id="salario"><br><br>
+                    <input type="submit" name="agregar" id="agregar" value="agregar">
+                </form>
+            </div> 
+        </section>
+
+        <section id="listaEmpleados">
+            <hr>
+            <h2>Empleados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th> <th>Apellido</th> <th>Edad</th> <th>Puesto</th> <th>Salario/Mensual</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <section id="listaDespedidos">
+            <hr>
+            <h2>Despedidos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th> <th>Apellido</th> <th>Edad</th> <th>Puesto</th> <th>Salario/Mensual</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* cabecera */
+.cabecera {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Secciones */
+#agregarEmpleado{
+    font-size: 15px;
+    font-weight: bold;
+}
+#agregarEmpleado input[type="text"], input[type="number"], select{
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    border: 1px solid rgba(176, 196, 222, 0.5);
+    border-radius: 3px;
+}
+#agregarEmpleado input[type="checkbox"]{
+    border: 1px solid rgba(176, 196, 222, 0.5);
+    border-radius: 3px;
+}
+/* contenedores */
+.contenedor-col{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    line-height: 25px;
+    width: 50%;
+}
+.contenedor-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
