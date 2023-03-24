@@ -26,9 +26,9 @@
                     <label for="apellido">Apellidos</label><br>
                     <input type="text" id="apellido" name="apellido"><br><br>
                     <label for="masculino">Masculino</label>
-                    <input type="checkbox" id="masculino" name="masculino">
+                    <input type="checkbox" id="masculino" name="masculino" onchange="alternar(this)">
                     <label for="femenino">femenino</label>
-                    <input type="checkbox" id="femenino" name="femenino"><br><br>
+                    <input type="checkbox" id="femenino" name="femenino" onchange="alternar(this)"><br><br>
                     <label for="edad">Edad</label><br>
                     <input type="number" name="edad" id="edad"><br><br>
                     <label for="puesto">Puesto</label><br>
@@ -46,7 +46,8 @@
                     </select><br><br>
                     <label for="salario">Salario Mensual</label><br>
                     <input type="number" name="salario" id="salario"><br><br>
-                    <input type="submit" name="agregar" id="agregar" value="agregar">
+                    <!-- <input type="submit" name="agregar" id="agregar" value="agregar"> -->
+                    <button onclick="agregarEmpleado()">Agregar</button>
                 </form>
             </div> 
         </section>
@@ -83,5 +84,7 @@
             </table>
         </section>
     </footer>
+
+    <script src="./JavaScript/script.js"></script>
 </body>
 </html>
