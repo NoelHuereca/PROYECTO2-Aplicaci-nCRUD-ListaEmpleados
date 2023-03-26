@@ -17,6 +17,10 @@
     font-weight: bold;
     padding: 10px;
 }
+#agregarEmpleado input[id="id"]{
+    margin-bottom: 5px;
+    display: none;
+}
 #agregarEmpleado input[type="text"], input[type="number"], select{
     width: 100%;
     height: 25px;
@@ -35,6 +39,9 @@
     width: 100%;
     height: 25px;
     font-weight: bold;
+}
+#agregarEmpleado button[id="btnConfirmar"]{
+    display: none
 }
 /* contenedores */
 .contenedor-col{

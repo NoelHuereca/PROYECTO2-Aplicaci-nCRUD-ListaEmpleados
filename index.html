@@ -9,11 +9,11 @@
 </head>
 <body>
     <header class="cabecera">
-        <dic>
+        <div>
             <h1>LISTA DE EMPLEADOS</h1>
             <p>A continuacion agregue un empleado nuevo.</p>
             <hr>
-        </dic>
+        </div>
         
     </header>
 
@@ -21,6 +21,7 @@
         <section id="agregarEmpleado" class="contenedor-row">
             <div class="contenedor-col">
                 <form>
+                    <input type="text" id="id" name="id" disabled>
                     <label for="nombre">Nombres</label><br>
                     <input type="text" id="nombre" name="nombre"><br><br>
                     <label for="apellido">Apellidos</label><br>
@@ -40,14 +41,14 @@
                         <option value="Backend_Developer">Backend Developer</option>
                         <option value="FullStack_Developer">FullStack Developer</option>
                         <option value="DBA">DBA (Database Administrator)</option>
-                        <option value="DBA">DBA (Database Administrator)</option>
                         <option value="Cloud_Architect">Cloud Architect</option>
                         <option value="QA">QA (Quiality Assurance)</option>
                     </select><br><br>
                     <label for="salario">Salario Mensual</label><br>
                     <input type="number" name="salario" id="salario"><br><br>
                     <!-- <input type="submit" name="agregar" id="agregar" value="agregar"> -->
-                    <button onclick="agregarEmpleado()">Agregar</button>
+                    <button id="btnAgregar">Agregar</button>
+                    <button id="btnConfirmar">Confirmar</button>
                 </form>
             </div> 
         </section>
@@ -58,12 +59,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Nombre</th> <th>Apellido</th> <th>Edad</th> <th>Puesto</th> <th>Salario/Mensual</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Puesto</th>
+                        <th scope="col">Salario/Mensual</th>
                     </tr>
                 </thead>
-                <tbody>
-
-                </tbody>
+                <tbody id="bodyTable"></tbody>
             </table>
         </section>
     </main>
