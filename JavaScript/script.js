@@ -2,6 +2,8 @@
 const idEmpleado = document.getElementById("id")
 const nombre = document.getElementById("nombre")
 const apellido = document.getElementById("apellido")
+const checkedMasculino = document.getElementById("masculino")
+const checkedFemenino = document.getElementById("femenino")
 const edad = document.getElementById("edad")
 const puesto = document.getElementById("puesto")
 const salario = document.getElementById("salario")
@@ -21,7 +23,12 @@ const agregarEmpleado = () =>{
         apellido: apellido.value,
         edad: edad.value,
         puesto: puesto.value,
-        salario: salario.value
+        salario: salario.value,
+    }
+    if(checkedMasculino.checked === true){
+        empleado.sexo = "hombre"
+    }else if(checkedFemenino.checked === true){
+        empleado.sexo = "mujer"
     }
 
     empleados.push(empleado) //agrega el objeto al arreglo empleados
@@ -33,6 +40,8 @@ const agregarEmpleado = () =>{
     edad.value=""
     puesto.value="default"
     salario.value=""
+    checkedMasculino.checked = false
+    checkedFemenino.checked = false
 
     mostrarEmpleado()
 }
@@ -45,6 +54,7 @@ const mostrarEmpleado = () =>{
         <td>${empleado.nombre}</td>
         <td>${empleado.apellido}</td>
         <td>${empleado.edad}</td>
+        <td>${empleado.sexo}</td>
         <td>${empleado.puesto}</td>
         <td>${empleado.salario}</td>
         <td><button onclick="eliminarEmpleado('${empleado.id}')">Eliminar</button></td>
@@ -71,10 +81,19 @@ const editarEmpleado = (id) =>{
     edad.value = empleado.edad
     puesto.value = empleado.puesto
     salario.value = empleado.salario
+
+    if(empleado.sexo === "hombre"){
+        checkedMasculino.checked = true
+    }else if(empleado.sexo === "mujer"){
+        checkedFemenino.checked =true
+    }
+
     idEmpleado.style.display = "inline"
     idEmpleado.value = empleado.id
     btnAgregar.style.display = "none"
     btnConfirmar.style.display = "inline"
+
+    bodyTable.setAttribute("class","ocultarbtn")
 }
 
 const confirmarEdicion = () =>{
@@ -84,6 +103,11 @@ const confirmarEdicion = () =>{
     empleado.edad = edad.value
     empleado.puesto = puesto.value
     empleado.salario = salario.value
+    if(checkedMasculino.checked === true){
+        empleado.sexo = "hombre"
+    }else if(checkedFemenino.checked === true){
+        empleado.sexo = "mujer"
+    }
     localStorage.setItem("empleados", JSON.stringify(empleados))
     btnAgregar.style.display = "inline"
     btnConfirmar.style.display = "none"
@@ -93,6 +117,10 @@ const confirmarEdicion = () =>{
     edad.value = ""
     puesto.value = "default"
     salario.value = ""
+    checkedMasculino.checked = false
+    checkedFemenino.checked = false
+
+    bodyTable.removeAttribute("class")
     mostrarEmpleado()
 }
 
