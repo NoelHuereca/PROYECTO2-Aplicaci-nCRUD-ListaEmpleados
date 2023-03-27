@@ -40,8 +40,63 @@
     height: 25px;
     font-weight: bold;
 }
+#agregarEmpleado button:hover{
+    background-color: rgba(176, 196, 222, 0.404);
+}
 #agregarEmpleado button[id="btnConfirmar"]{
     display: none
+}
+
+#listaEmpleados{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+}
+#listaEmpleados h2{
+    text-align: center;
+    padding: 10px;
+}
+#listaEmpleados .tablaEmpleados{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#listaEmpleados .tablaEmpleados thead th{
+    background-color: #000000a6;
+    color: white;
+    padding: 10px;
+}
+#listaEmpleados .tablaEmpleados tbody td, tbody th{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: #ece8e8;
+}
+
+#listaEmpleados .tablaEmpleados button{
+    width: 40%;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+#listaEmpleados .tablaEmpleados button.btnEliminar{
+    background-color: rgba(204, 49, 49, 0.63);
+    color: white;
+}
+#listaEmpleados .tablaEmpleados button.btnEliminar:hover{
+    background-color: rgb(204, 49, 49);
+}
+#listaEmpleados .tablaEmpleados button.btnEditar{
+    background-color: rgba(252, 255, 83, 0.575);
+}
+#listaEmpleados .tablaEmpleados button.btnEditar:hover{
+    background-color: rgb(251, 255, 0);
 }
 /* contenedores */
 .contenedor-col{
@@ -61,4 +116,11 @@
 /* clases personalizadas */
 .ocultarbtn button{
     visibility: hidden;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
+.campoFaltante{
+    background-color: rgba(255, 0, 0, 0.089);
 }

@@ -1,4 +1,5 @@
 /* elementos */
+const form = document.querySelector('form')
 const idEmpleado = document.getElementById("id")
 const nombre = document.getElementById("nombre")
 const apellido = document.getElementById("apellido")
@@ -13,6 +14,7 @@ const bodyTable = document.getElementById("bodyTable")
 
 const btnAgregar = document.getElementById("btnAgregar")
 const btnConfirmar = document.getElementById("btnConfirmar")
+const mensajeError = document.getElementById("mensajeError")
 /* Arreglo de objeto de empleados y objeto empleado*/
 
 /* funciones */
@@ -35,7 +37,7 @@ const agregarEmpleado = () =>{
     console.log(empleados) //imprime en consola los cambios del arreglo
     localStorage.setItem("empleados",JSON.stringify(empleados))
 
-    nombre.value=""
+    nombre.value= ""
     apellido.value=""
     edad.value=""
     puesto.value="default"
@@ -57,8 +59,7 @@ const mostrarEmpleado = () =>{
         <td>${empleado.sexo}</td>
         <td>${empleado.puesto}</td>
         <td>${empleado.salario}</td>
-        <td><button onclick="eliminarEmpleado('${empleado.id}')">Eliminar</button></td>
-        <td><button onclick="editarEmpleado('${empleado.id}')">Editar</button></td>
+        <td class="celdabtn"><button class="btnEliminar" onclick="eliminarEmpleado('${empleado.id}')">Eliminar</button><button class="btnEditar" onclick="editarEmpleado('${empleado.id}')">Editar</button></td>
         </tr>
         `
     });
@@ -125,8 +126,32 @@ const confirmarEdicion = () =>{
 }
 
 btnAgregar.addEventListener("click",(Event)=>{
-    Event.preventDefault()
-    agregarEmpleado()
+    if(nombre.value === ""||apellido.value===""||puesto.value==="default"||salario.value===""){
+        Event.preventDefault()
+        mensajeError.innerText = "Por favor, complete todos los campos obligatorios *"
+        mensajeError.classList.add("error")
+        if(nombre.value===""){
+            nombre.classList.add("campoFaltante")
+        }
+        if(apellido.value===""){
+            apellido.classList.add("campoFaltante")
+        }
+        if(puesto.value==="default"){
+            puesto.classList.add("campoFaltante")
+        }
+        if(salario.value===""){
+            salario.classList.add("campoFaltante")
+        }
+    }else{
+        Event.preventDefault()
+        agregarEmpleado()
+        nombre.removeAttribute("class")
+        apellido.removeAttribute("class")
+        puesto.removeAttribute("class")
+        salario.removeAttribute("class")
+        mensajeError.innerHTML= ""
+    }
+    
 })
 btnConfirmar.addEventListener("click",(Event)=>{
     Event.preventDefault()
