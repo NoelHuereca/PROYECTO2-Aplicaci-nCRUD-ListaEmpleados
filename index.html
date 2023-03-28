@@ -13,26 +13,24 @@
             <h1>LISTA DE EMPLEADOS</h1>
             <p>A continuacion agregue un empleado nuevo.</p>
             <hr>
-        </div>
-        
+        </div>  
     </header>
-
     <main>
         <section id="agregarEmpleado" class="contenedor-row">
             <div class="contenedor-col">
                 <form>
                     <input type="text" id="id" name="id" disabled>
-                    <label for="nombre">Nombres *</label><br>
+                    <label for="nombre">NOMBRES <span>*</span></label><br>
                     <input type="text" id="nombre" name="nombre" required><br><br>
-                    <label for="apellido">Apellidos *</label><br>
+                    <label for="apellido">APELLIDOS <span>*</span></label><br>
                     <input type="text" id="apellido" name="apellido" required><br><br>
-                    <label for="masculino">Masculino</label>
+                    <label for="masculino">MASCULINO</label>
                     <input type="checkbox" id="masculino" name="masculino" onchange="alternar(this)">
-                    <label for="femenino">femenino</label>
+                    <label for="femenino">FEMENINO</label>
                     <input type="checkbox" id="femenino" name="femenino" onchange="alternar(this)"><br><br>
-                    <label for="edad">Edad</label><br>
+                    <label for="edad">EDAD</label><br>
                     <input type="number" name="edad" id="edad"><br><br>
-                    <label for="puesto">Puesto *</label><br>
+                    <label for="puesto">PUESTO <span>*</span></label><br>
                     <select name="puesto" id="puesto" required>
                         <option value="default">--</option>
                         <option value="We_Designer">Web Designer</option>
@@ -44,7 +42,7 @@
                         <option value="Cloud_Architect">Cloud Architect</option>
                         <option value="QA">QA (Quiality Assurance)</option>
                     </select><br><br>
-                    <label for="salario">Salario Mensual *</label><br>
+                    <label for="salario">SALARIO MENSUAL <span>*</span></label><br>
                     <input type="number" name="salario" id="salario" required><br><br>
                     <!-- <input type="submit" name="agregar" id="agregar" value="agregar"> -->
                     <button id="btnAgregar">Agregar</button>
@@ -53,14 +51,17 @@
                 </form>
             </div> 
         </section>
-        <hr>
+    </main>
+    <footer>
         <section id="listaEmpleados">
-            <h2>Empleados</h2>
+            <div class="subTitles">
+                <h2>Empleados</h2>
+            </div>
             <div class="contenedor-row">
                 <table class="tablaEmpleados">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col">#</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
                             <th scope="col">Edad</th>
@@ -74,25 +75,7 @@
                 </table>
             </div>  
         </section>
-    </main>
-
-    <footer>
-        <!-- <section id="listaDespedidos">
-            <hr>
-            <h2>Despedidos</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th> <th>Apellido</th> <th>Edad</th> <th>Sexo</th> <th>Puesto</th> <th>Salario/Mensual</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </section>
-    </footer> -->
-
+    </footer>
     <script src="./JavaScript/script.js"></script>
 </body>
 </html>

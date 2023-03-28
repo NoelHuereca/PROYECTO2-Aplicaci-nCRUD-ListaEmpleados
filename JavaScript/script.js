@@ -52,7 +52,7 @@ const mostrarEmpleado = () =>{
     bodyTable.innerHTML = ""
     empleados.forEach((empleado) => {
         bodyTable.innerHTML += `<tr>
-        <th scope="row">${empleado.id}</th>
+        <th scope="row" id="idLista">${empleado.id}</th>
         <td>${empleado.nombre}</td>
         <td>${empleado.apellido}</td>
         <td>${empleado.edad}</td>
