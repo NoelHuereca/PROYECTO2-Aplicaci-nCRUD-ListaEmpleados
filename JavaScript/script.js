@@ -59,7 +59,7 @@ const mostrarEmpleado = () =>{
         <td>${empleado.sexo}</td>
         <td>${empleado.puesto}</td>
         <td>${empleado.salario}</td>
-        <td class="celdabtn"><button class="btnEliminar" onclick="eliminarEmpleado('${empleado.id}')">Eliminar</button><button class="btnEditar" onclick="editarEmpleado('${empleado.id}')">Editar</button></td>
+        <td class="celdabtn"><button class="btnEliminar" onclick="eliminarEmpleado('${empleado.id}')">Eliminar</button><a href="#arriba"><button class="btnEditar" onclick="editarEmpleado('${empleado.id}')">Editar</button></a></td>
         </tr>
         `
     });
