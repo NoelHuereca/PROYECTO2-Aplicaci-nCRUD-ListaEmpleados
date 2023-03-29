@@ -52,6 +52,7 @@
     background-color: rgba(48, 80, 122, 0.35);
     border: 1px solid rgba(176, 196, 222, 0.5);
     border-radius: 3px;
+    margin-left: 10px;
 }
 #agregarEmpleado button{
     background-color: rgba(6, 247, 255, 0.253);
@@ -153,7 +154,7 @@ tr:nth-child(odd) {
     box-shadow: 0.5px 0.5px 7px red;
 }
 
-/* mediaqueries */
+/* media queries */
 @media screen and (max-width: 828px) {
     #listaEmpleados{
         overflow: hidden;

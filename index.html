@@ -24,10 +24,17 @@
                     <input type="text" id="nombre" name="nombre" required><br><br>
                     <label for="apellido">APELLIDOS <span>*</span></label><br>
                     <input type="text" id="apellido" name="apellido" required><br><br>
-                    <label for="masculino">MASCULINO</label>
-                    <input type="checkbox" id="masculino" name="masculino" onchange="alternar(this)">
-                    <label for="femenino">FEMENINO</label>
-                    <input type="checkbox" id="femenino" name="femenino" onchange="alternar(this)"><br><br>
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="display: flex; justify-content: baseline; flex-wrap: nowrap; margin-right: 35px;">
+                            <label for="masculino">MASCULINO</label>
+                            <input type="checkbox" id="masculino" name="masculino" onchange="alternar(this)">
+                        </div>
+                        <div style="display: flex; justify-content: baseline; flex-wrap: nowrap;">
+                            <label for="femenino">FEMENINO</label>
+                            <input type="checkbox" id="femenino" name="femenino" onchange="alternar(this)">
+                        </div>
+                    </div>
+                    <br>
                     <label for="edad">EDAD</label><br>
                     <input type="number" name="edad" id="edad"><br><br>
                     <label for="puesto">PUESTO <span>*</span></label><br>
